@@ -11,18 +11,15 @@
 
 <body>
     <!-- Source: TV Perú Noticias -->
- <!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source src="https://youtu.be/Nh8ISsvrr8M?t=25m42s" type="video/mp4">
-</video>
-
-<!-- Optional: some overlay text to describe the video -->
-<div class="content">
+    <!-- Optional: some overlay text to describe the video -->
+<div class="content" id="YouTubeBackgroundVideoPlayer>
   <h1>Heading</h1>
   <p>Lorem ipsum...</p>
   <!-- Use a button to pause/play the video with JavaScript -->
   <button id="myBtn" onclick="myFunction()">Pause</button>
 </div> 
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script async src="video.js"></script>
     <script>
             // Get the video
             var video = document.getElementById("myVideo")
