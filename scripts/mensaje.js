@@ -1,7 +1,7 @@
 function onYouTubeIframeAPIReady() {
   var player;
   player = new YT.Player('mensajeJulio2018', {
-      videoId: '{$Nh8ISsvrr8M}', // YouTube Video ID
+      videoId: '{Nh8ISsvrr8M}', // YouTube Video ID
       width: 1280,                        // Player width (in px)
       height: 720,                        // Player height (in px)
       playerVars: {
