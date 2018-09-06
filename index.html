@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<meta name="format-detection" content="telephone=no">
-<meta name="msapplication-tap-highlight" content="no">
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-<link rel="stylesheet" type="text/css" href="css/index.css">
-<title>ReferendumYaApp</title>
-</head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>ReferendumYa</title>
+    </head>
 
 <body>
     <!-- Source: TV Perú Noticias -->
@@ -17,13 +18,29 @@
     <!-- Optional: some overlay text to describe the video -->
     <div class="content">
         <h1>Heading</h1>
-        <p>Lorem ipsum...</p>
+        <p>Anotación</p>
         <!-- Use a button to pause/play the video with JavaScript -->
         <button id="myBtn" onclick="myFunction()">Pause</button>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
-    <script type="text/javascript" src="scripts/video.js"></script>
+    <script>
+            // Get the video
+            var video = document.getElementById("myVideo")
+            // Get the button
+            var btn = document.getElementById("myBtn");
+            // Pause and play the video, and change the button text
+            
+            function myFunction() {
+                if (video.paused) {
+                    video.play();
+                btn.innerHTML = "Pause";
+                } else {
+                    video.pause();
+                btn.innerHTML = "Play";
+                }
+            }
+            </script>
 </body>
 </html>
