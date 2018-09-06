@@ -1,11 +1,11 @@
 function onYouTubeIframeAPIReady() {
   var player;
-  player = new YT.Player('YouTubeBackgroundVideoPlayer', {
+  player = new YT.Player('mensajeJulio2018', {
       videoId: '{$Nh8ISsvrr8M?t=25m42s}', // YouTube Video ID
       width: 1280,                        // Player width (in px)
       height: 720,                        // Player height (in px)
       playerVars: {
-        playlist: '{$Nh8ISsvrr8M?t=25m42s}',
+        //playlist: '{$Nh8ISsvrr8M?t=25m42s}',
           autoplay: 1,        // Auto-play the video on load
           autohide: 1,
           disablekb: 1, 
