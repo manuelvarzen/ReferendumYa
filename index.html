@@ -12,21 +12,21 @@
 <body>
     <!-- Source: TV Perú Noticias -->
     <!-- Optional: some overlay text to describe the video -->
-<div class="content" id="YouTubeBackgroundVideoPlayer>
+  <div class="content" id="YouTubeBackgroundVideoPlayer>
   <h1>Heading</h1>
   <p>Lorem ipsum...</p>
   <!-- Use a button to pause/play the video with JavaScript -->
   <button id="myBtn" onclick="myFunction()">Pause</button>
 </div> 
+                                           
 <script async src="https://www.youtube.com/iframe_api"></script>
-<script async src="video.js"></script>
-    <script>
+<script async src="/script/mensaje.js"></script>    
+            <script>
             // Get the video
             var video = document.getElementById("myVideo")
             // Get the button
             var btn = document.getElementById("myBtn");
-            // Pause and play the video, and change the button text
-            
+            // Pause and play the video, and change the button text  
             function myFunction() {
                 if (video.paused) {
                     video.play();
