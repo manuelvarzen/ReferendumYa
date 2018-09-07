@@ -3,18 +3,53 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Referéndum Ya!</title>
-  <meta name="keywords" content="mensaje, 28, julio, 2018, Martin Vizcarra, Vizcarra, referéndum, chonchonli, fiestas patrias, bicentenario">
-  <meta  name="description" content="Recordemos el sentido de urgencia de la convocatia al referéundum convocada por el señor presidente de la República, Martin Vizcarra">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Twitter Boostrap for Demo -->
-  <link rel="stylesheet" href="src/bootstrap.min.css">
-  <!-- styles for video player -->
-  <link rel="stylesheet" href="src/style.css">
-</head>
+                       <head>
+                           <meta charset="utf-8">
+                           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                           <meta name="viewport" content="width=device-width, initial-scale=1">
+                           <meta name="description" content="Recordemos el sentido de urgencia de la convocatia al referéundum convocada por el señor presidente de la República, Martin Vizcarra">
+                           <meta name="keywords" content="mensaje, 28, julio, 2018, Martin Vizcarra, Vizcarra, referéndum, chonchonli, fiestas patrias, bicentenario">
+                           <meta name="robots" content="index, follow">
+                           <meta name="author" content="manuelvarzen" />
+                           <meta name="author" content="https://manuelvarzen.github.io/ReferendumYa" />
+
+
+                           <title>Referéndum Ya!</title>
+
+
+                           <!-- Twitter Boostrap for Demo -->
+                           <link rel="stylesheet" href="src/bootstrap.min.css">
+                           <!-- styles for video player -->
+                           <link rel="stylesheet" href="src/style.css">
+
+
+                           <!-- I prefer the summary_large_image Twitter card for posts. -->
+                           <meta name="twitter:card" content="summary_large_image" />
+                           <!-- You, you're the creator. -->
+                           <meta name="twitter:creator" content="@manuelvarzen" />
+                           <!-- This property is for the article title, not site title. -->
+                           <meta name="twitter:title" content="Referéndum Ya!!!" />
+
+                           {% if page.image %}
+                           <meta property="og:image" content="{{ site.url }}{{page.image}}" />
+                           <meta name="twitter:image" content="{{ site.urlimg }}{{page.image.thumb}}" />
+                           {% else %}
+                           <meta property="og:image" content="{{ site.url }}{{page.image}}" />
+                           <meta name="twitter:image" content="{{ site.urlimg }}{{page.image.thumb}}" />
+                           {% endif %}
+
+                           {% else %}
+
+                           <!-- OG data for homepage -->
+                           <meta property="og:image:url" content="{{ site.url }}{{page.image}}" />
+                           <meta property="og:type" content="website" />
+
+                           <meta name="twitter:card" content="summary" />
+                           <meta name="twitter:image" content="{{ site.urlimg }}{{page.image.thumb}}">
+                           <meta name="twitter:title" content="{{ site.title }}" />
+
+                       </head>
+ 
 <body>
 
   <div id="background-video" class="background-video"></div>
