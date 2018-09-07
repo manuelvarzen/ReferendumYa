@@ -22,31 +22,13 @@
                            <!-- styles for video player -->
                            <link rel="stylesheet" href="src/style.css">
 
-
-                           <!-- I prefer the summary_large_image Twitter card for posts. -->
-                           <meta name="twitter:card" content="summary_large_image" />
-                           <!-- You, you're the creator. -->
-                           <meta name="twitter:creator" content="@manuelvarzen" />
-                           <!-- This property is for the article title, not site title. -->
-                           <meta name="twitter:title" content="Referéndum Ya!!!" />
-
-                           {% if page.image %}
-                           <meta property="og:image" content="{{ site.url }}{{page.image}}" />
-                           <meta name="twitter:image" content="{{ site.urlimg }}{{page.image.thumb}}" />
-                           {% else %}
-                           <meta property="og:image" content="{{ site.url }}{{page.image}}" />
-                           <meta name="twitter:image" content="{{ site.urlimg }}{{page.image.thumb}}" />
-                           {% endif %}
-
-                           {% else %}
-
-                           <!-- OG data for homepage -->
-                           <meta property="og:image:url" content="{{ site.url }}{{page.image}}" />
-                           <meta property="og:type" content="website" />
-
                            <meta name="twitter:card" content="summary" />
-                           <meta name="twitter:image" content="{{ site.urlimg }}{{page.image.thumb}}">
-                           <meta name="twitter:title" content="{{ site.title }}" />
+                           <meta name="twitter:site" content="@Referéndum Ya!!!" />
+                           <meta name="twitter:creator" content="@manuelvarzen" />
+                           <meta property="og:url" content="https://manuelvarzen.github.io/ReferendumYa" />
+                           <meta property="og:title" content="Un espacio para recordar el proceso pendiente del referéndum" />
+                           <meta property="og:description" content="Recordemos el sentido de urgencia del referéndum convocado por el presidente de la República durante su mensaje a la nación del 28 de Julio." />
+                           <meta property="og:image" content="https://manuelvarzen.github.com/Vigia/img/pdte_Martin41.jpg" />
 
                        </head>
  
