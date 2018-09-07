@@ -1,67 +1,60 @@
-<html>
-    <title> </title>
-    <head> </head>
-    <body>
-<div class="video-background">
-    <div class="video-foreground">   
-    <iframe src="https://www.youtube.com/embed/Nh8ISsvrr8M?start=1542" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    
-    </div>
-  </div>
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Referéndum Ya!</title>
+  <meta name="keywords" content="mensaje, 28, julio, 2018, Martin Vizcarra, Vizcarra, referéndum, chonchonli, fiestas patrias, bicentenario">
+  <meta  name="description" content="Recordemos el sentido de urgencia de la convocatia al referéundum convocada por el señor presidente de la República, Martin Vizcarra">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Twitter Boostrap for Demo -->
+  <link rel="stylesheet" href="src/bootstrap.min.css">
+  <!-- styles for video player -->
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
 
-<div id="vidtop-content">
-<div class="vid-info">
-  <h1>YouTube Fullscreen Background Demo</h1>
-  <p>The International Space Station orbits the Earth every 92 minutes, with its crew seeing a sunrise 15 times a day. It exists as a scientific, educational, and engineering platform in low orbit, 330 to 435 kilometres above the Earth.
-     <p>Original timelapse by Riccardo Rossi (ISAA), used under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Raw photos courtesy of http://eol.jsc.nasa.gov/
+  <div id="background-video" class="background-video"></div>
 
-<a href="FullScreen YouTube Video Background In Pure CSS ">Full Example</a>
-  </div>
-</div>
- 
-<style>
-#CSS
-* { box-sizing: border-box; }
-.video-background {
-  background: #000;
-  position: fixed;
-  top: 0; right: 0; bottom: 0; left: 0;
-  z-index: -99;
-}
-.video-foreground,
-.video-background iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-#vidtop-content {
-color: #fff;
-     z-index: 2;
-}
-.vid-info {
-    padding: 1rem;
-    font-family: Avenir, Helvetica, sans-serif;
-   }
-.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
-.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
-@media (min-aspect-ratio: 16/9) {
-  .video-foreground { height: 300%; top: -100%; }
-}
-@media (max-aspect-ratio: 16/9) {
-  .video-foreground { width: 300%; left: -100%; }
-}
-@media all and (max-width: 600px) {
-.vid-info { width: 50%; padding: .5rem; }
-.vid-info h1 { margin-bottom: .2rem; }
-}
-@media all and (max-width: 500px) {
-.vid-info .acronym { display: none; }
-}
-#Taken From: https://codepen.io/dudleystorey/pen/PZyMrd
-</style>
+  <div class="padding container">
+    <h1>Referéndum Ya!</h1>
+    <p class="lead">Recordemos el sentido de urgencia del referéndum convocado por el presidente de la República durante su mensaje a la nación del 28 de Julio.</p> 
+    <p class="lead">También puedes leer un breve <a href="https://manuelvarzen.github.io/Vigia/2018/07/29/Message-TexFlow/"> análisis textual del mensaje </a> elaborado por <a href="https://www.twitter.com/manuelvarzen">ManuelVarZen</a>
+  </p></div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- ADD Jquery Video Background -->
+  <script src="src/jquery.youtubebackground.js"></script>
+  
+    <script>
+    jQuery(function($) {      
+      $('#background-video').YTPlayer({
+        fitToBackground: true,
+          videoId: 'Nh8ISsvrr8M',
+        pauseOnScroll: true,
+        callback: function() {
+          videoCallbackEvents();
+        }
+      });
+      
+      var videoCallbackEvents = function() {
+        var player = $('#background-video').data('ytPlayer').player;
+      
+        player.addEventListener('onStateChange', function(event){
+            console.log("Player State Change", event);
 
-    </body>
+            // OnStateChange Data
+            if (event.data === 0) {          
+                console.log('video ended');
+            }
+            else if (event.data === 2) {          
+              console.log('paused');
+            }
+        });
+      }
+    });
+  </script>
+</body>
 </html>
