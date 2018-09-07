@@ -183,19 +183,19 @@ if (typeof Object.create !== "function") {
     // * @function createContainerVideo
     // * Adds HTML for video in a container
     // */
-    //createContainerVideo: function createContainerVideo() {
-    //  var self = this;
+    createContainerVideo: function createContainerVideo() {
+      var self = this;
 
-    //  /*jshint multistr: true */
-    //  var $YTPlayerString = $('<div id="ytplayer-container' + self.ID + '" >\
-    //                                <div id="' + self.holderID + '" class="ytplayer-player-inline"></div> \
-    //                                </div> \
-    //                                <div id="ytplayer-shield" class="ytplayer-shield"></div>');
+      /*jshint multistr: true */
+      var $YTPlayerString = $('<div id="ytplayer-container' + self.ID + '" >\
+                                   <div id="' + self.holderID + '" class="ytplayer-player-inline"></div> \
+                                    </div> \
+                                    <div id="ytplayer-shield" class="ytplayer-shield"></div>');
 
-    //  self.$node.append($YTPlayerString);
-    //  self.$YTPlayerString = $YTPlayerString;
-    //  $YTPlayerString = null;
-    //},
+      self.$node.append($YTPlayerString);
+      self.$YTPlayerString = $YTPlayerString;
+      $YTPlayerString = null;
+    },
 
     /**
      * @function createBackgroundVideo
